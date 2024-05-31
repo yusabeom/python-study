@@ -16,6 +16,7 @@ triple_square(li[3])
 triple_square(li[4])
 '''
 
+
 result = list(map(triple_square, li))
 print(result)
 

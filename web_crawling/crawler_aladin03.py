@@ -59,6 +59,7 @@ with codecs.open(file_path, mode='w', encoding='utf-8') as f:
     soup = BeautifulSoup(src, 'html.parser')
 
     div_list = soup.find_all('div', class_='ss_book_box')
+    # div_list = soup.select('div.ss_book_box') -> 가능
 
     rank = 1
 
@@ -87,3 +88,20 @@ with codecs.open(file_path, mode='w', encoding='utf-8') as f:
         f.write('-' * 40 + '\n')
 
         rank += 1
+
+'''
+find: 조건에 맞는 첫 번째 요소를 반환합니다.
+find_all: 조건에 맞는 모든 요소를 리스트 형태로 반환합니다.
+select: CSS 선택자를 사용해 요소를 선택합니다.
+select_one: CSS 선택자를 사용해 첫 번째 요소를 선택합니다.
+find_parent: 해당 요소의 부모 요소를 반환합니다.
+find_parents: 조건에 맞는 모든 부모 요소를 리스트 형태로 반환합니다.
+find_next_sibling: 다음 형제 요소를 반환합니다.
+find_next_siblings: 조건에 맞는 모든 다음 형제 요소를 리스트 형태로 반환합니다.
+find_previous_sibling: 이전 형제 요소를 반환합니다.
+find_previous_siblings: 조건에 맞는 모든 이전 형제 요소를 리스트 형태로 반환합니다.
+find_next: 다음 요소를 반환합니다.
+find_all_next: 조건에 맞는 모든 다음 요소를 리스트 형태로 반환합니다.
+find_previous: 이전 요소를 반환합니다.
+find_all_previous: 조건에 맞는 모든 이전 요소를 리스트 형태로 반환합니다.
+'''
